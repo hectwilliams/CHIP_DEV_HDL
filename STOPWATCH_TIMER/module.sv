@@ -37,10 +37,19 @@ module model #(parameter
       paused <= 0;
 		
       running <= 1;
+     
+      if (count == MAX) begin
+        
+        count <= 0;
       
-      count <= count + 1;
+      end else begin
       
+        count <= count + 1;
+      
+      end
+
     end
+
   end
    
   
