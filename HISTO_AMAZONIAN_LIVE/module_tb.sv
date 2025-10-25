@@ -240,7 +240,7 @@ module module_tb;
   end
 
   
-  module u0(
+  histo u0(
     .clk(clk),
     .data_in(data_in),
     .data_valid(data_valid),
