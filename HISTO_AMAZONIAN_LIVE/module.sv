@@ -16,7 +16,7 @@
 //                  _____                              //
 // hist_init  _____|     |___________________________ //____________________________________________________
 
-module question_histogram_shamed #(parameter HISTOGRAM_SIZE=1024, MAX_SEQUENCE_LENGTH=16) 
+module module #(parameter HISTOGRAM_SIZE=1024, MAX_SEQUENCE_LENGTH=16) 
   (
     input clk,
     input logic data_valid,

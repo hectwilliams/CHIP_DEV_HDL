@@ -1,6 +1,6 @@
 
 
-module question_histogram_shamed_tb;
+module module_tb;
   
 	
   parameter MAX_SEQ_SIZE = 16;
@@ -240,7 +240,7 @@ module question_histogram_shamed_tb;
   end
 
   
-  question_histogram_shamed u0(
+  module u0(
     .clk(clk),
     .data_in(data_in),
     .data_valid(data_valid),
