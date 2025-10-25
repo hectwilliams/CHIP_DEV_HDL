@@ -23,9 +23,9 @@ module gen_gray_vector #(parameter DATA_WIDTH = 1, ID = 1) (
 	
   parameter k = WIDTH - delay_size;
   
-  parameter k_aligned = (on_off_size + (k - 1) ) & ~(k - 1);
+  parameter k_aligned = (on_off_size + (k - 1) ) & ~(k - 1); // aligned to nearest even number :) 
   
-  parameter factor = ((k_aligned > k)  == 0) ? ( k / on_off_size ) : ( k  / on_off_size ) + 1;
+  parameter factor = ((k_aligned > k)  == 0) ? ( k / on_off_size ) : ( k  / on_off_size ) + 1; // make sure we CEIL() correctly
   
   parameter logic[WIDTH -1 :0] code_seq = {{factor{on_off_seq}}, delay_seq}  & {WIDTH{1'b1}}; 
 	
