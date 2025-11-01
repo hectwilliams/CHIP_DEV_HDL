@@ -51,6 +51,8 @@ module TrailingZeros #(parameter
   
   wire  [$clog2(DATA_WIDTH) :0] adder_bus [DATA_WIDTH];
 
+  COUNT_WIDTH = $clog2(DATA_WIDTH) + 1;
+
   genvar i;
   
   for ( i = 0; i < DATA_WIDTH; i=i+1) begin
@@ -72,7 +74,7 @@ module TrailingZeros #(parameter
     
         .en(ones_bus[i]),
         
-        .din({4'b0}),
+        .din({COUNT_WIDTH{1'b0}}),
         
         .dout(adder_bus[i])
         
