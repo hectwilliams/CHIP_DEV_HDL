@@ -1,0 +1,12 @@
+v 4
+file / "/work/src/andgate.vhd" "be89934be8a674b313048869a3cbabcbb014a758" "20260702010038.471":
+  entity andgate at 1( 0) + 0 on 14;
+  architecture rtl of andgate at 15( 177) + 0 on 15;
+file / "/work/src/notgate.vhd" "503dd3345d5e533a67a4fee5e722d0e11f0f0c44" "20260702010038.330":
+  entity notgate at 1( 0) + 0 on 11;
+  architecture rtl of notgate at 13( 152) + 0 on 12;
+file / "/work/src/globals.vhd" "e3407d9ba7295ee9abc7fc57413621cde0398532" "20260702010038.410":
+  package globals at 1( 0) + 0 on 13;
+file / "/work/src/nandgate.vhd" "2a91326221bccdc0e8b475dfc791c0e66df60f67" "20260702010157.517":
+  entity nandgate at 4( 3) + 0 on 18;
+  architecture rtl of nandgate at 20( 257) + 0 on 19;

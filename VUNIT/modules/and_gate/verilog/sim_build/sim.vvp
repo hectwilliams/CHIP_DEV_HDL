@@ -1,0 +1,65 @@
+#! /usr/local/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/13.0/lib/ivl/v2009.vpi";
+S_0x7fb910a08ab0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x7fb910a06fa0 .scope package, "globals" "globals" 3 1;
+ .timescale -9 -12;
+S_0x7fb910a04ba0 .scope task, "dingdong" "dingdong" 3 4, 3 4 0, S_0x7fb910a06fa0;
+ .timescale -9 -12;
+TD_globals.dingdong ;
+    %vpi_call/w 3 6 "$display", "dingdong" {0 0 0};
+    %end;
+S_0x7fb910a07110 .scope module, "nandgate" "nandgate" 4 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+o0x7fb910932008 .functor BUFZ 1, c4<z>; HiZ drive
+v0x7fb910a19110_0 .net "a", 0 0, o0x7fb910932008;  0 drivers
+o0x7fb910932038 .functor BUFZ 1, c4<z>; HiZ drive
+v0x7fb910a191c0_0 .net "b", 0 0, o0x7fb910932038;  0 drivers
+v0x7fb910a19270_0 .net "c", 0 0, L_0x7fb910a19660;  1 drivers
+v0x7fb910a19340_0 .net "data", 0 0, L_0x7fb910a19570;  1 drivers
+v0x7fb910a19410_0 .var "sim_a", 0 0;
+v0x7fb910a194e0_0 .var "sim_clk", 0 0;
+S_0x7fb910a04d10 .scope module, "dut_and" "andgate" 4 11, 5 1 0, S_0x7fb910a07110;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+L_0x7fb910a19570 .functor AND 1, o0x7fb910932008, o0x7fb910932038, C4<1>, C4<1>;
+v0x7fb910a06280_0 .net "a", 0 0, o0x7fb910932008;  alias, 0 drivers
+v0x7fb910a18c00_0 .net "b", 0 0, o0x7fb910932038;  alias, 0 drivers
+v0x7fb910a18ca0_0 .net "c", 0 0, L_0x7fb910a19570;  alias, 1 drivers
+S_0x7fb910a18da0 .scope module, "dut_not" "notgate" 4 17, 6 1 0, S_0x7fb910a07110;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "b";
+L_0x7fb910a19660 .functor NOT 1, L_0x7fb910a19570, C4<0>, C4<0>, C4<0>;
+v0x7fb910a18fb0_0 .net "a", 0 0, L_0x7fb910a19570;  alias, 1 drivers
+v0x7fb910a19060_0 .net "b", 0 0, L_0x7fb910a19660;  alias, 1 drivers
+    .scope S_0x7fb910a07110;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fb910a194e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fb910a19410_0, 0, 1;
+    %end;
+    .thread T_1, $init;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/Users/hectorwilliams/Documents/Dev/repos/CHIP_DEV_HDL/VUNIT/modules/and_gate/verilog/src/globals.sv";
+    "/Users/hectorwilliams/Documents/Dev/repos/CHIP_DEV_HDL/VUNIT/modules/and_gate/verilog/src/nandgate.sv";
+    "/Users/hectorwilliams/Documents/Dev/repos/CHIP_DEV_HDL/VUNIT/modules/and_gate/verilog/src/andgate.sv";
+    "/Users/hectorwilliams/Documents/Dev/repos/CHIP_DEV_HDL/VUNIT/modules/and_gate/verilog/src/notgate.sv";

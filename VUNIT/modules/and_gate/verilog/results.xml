@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1782952693" />
+    <testcase name="test1" classname="test" file="/Users/hectorwilliams/Documents/Dev/repos/CHIP_DEV_HDL/VUNIT/modules/and_gate/verilog/test.py" lineno="20" time="0.00043392181396484375" sim_time_ns="0.0" ratio_time="0.0" />
+    <testcase name="test2" classname="test" file="/Users/hectorwilliams/Documents/Dev/repos/CHIP_DEV_HDL/VUNIT/modules/and_gate/verilog/test.py" lineno="30" time="0.00055694580078125" sim_time_ns="0.9999999999999999" ratio_time="1795.5068493150684" />
+  </testsuite>
+</testsuites>
