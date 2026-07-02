@@ -1,4 +1,20 @@
 # CHIP_DEV_HDL
-Coding Questions 
+HDL
 
-Solutions highlight various methods to solve a problem. Some solutions are optimal while others may not be.
+## 📂 Repo Structure
+
+```text
+CHIP_DEV_HDL
+├── algorithms/
+│   ├── ...
+├── VUNIT/
+│   ├── modules/
+│   │   ├── andgate/
+│   │   └── ...
+│   ├── myenv/
+│   │   └── ..
+├── .gitignore
+└── README.md
+```
+
+

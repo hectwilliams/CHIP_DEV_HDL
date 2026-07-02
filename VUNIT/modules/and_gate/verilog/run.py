@@ -9,8 +9,6 @@ from vunit import VUnit
 
 vu = VUnit.from_argv()
 vu.add_verilog_builtins()
-# vu.add_osvvm() # open source vhdl verification 
-# vu.add_verification_components()
 
 lib = vu.add_library("design_lib")
 
